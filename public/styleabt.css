@@ -1,0 +1,289 @@
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(214, 68, 15);
+    margin: 0px;
+    padding: 0px;
+    background: url('img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} 
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+nav{
+    height:8.8rem;
+    background-color: rgb(247, 229, 222);
+}
+nav img{
+    width: 35rem;
+    height: 7rem;
+    position: absolute;
+    top: 0.7rem;
+    left:1rem;
+}
+nav ul{
+    float: right;
+    margin-right: 2.5rem;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 8rem;
+    margin: 0rem 1.5rem;
+}
+nav ul li a{
+    position: relative;
+    color: rgb(214, 68, 15);
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: .2rem;
+    width: 100%;
+    background-color: rgb(224, 61, 2);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform.4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,label #cancel{
+    color: rgb(224, 61, 2);
+    font-size: 3rem;
+    line-height: 8rem;
+    float: right;
+    margin-right: 4rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+  } 
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 1.6rem;
+  }
+  
+  .card {
+    width: 92%;
+    padding: 1rem;
+    text-decoration-color: black;
+    border-radius: 13px;
+    color: black ;
+    text-align: left;
+    background-color: rgb(231, 228, 228);
+    line-height: 4rem;
+    box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    font-size: 2rem;
+    height: 50%;
+    
+  }
+  .card img{
+    height: 26rem;
+    border-radius: 2rem;
+}
+  
+  .containercont::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+      letter-spacing: 0.8rem;
+    color: grey;
+  }
+  h2{
+    letter-spacing: 0.5rem;
+  }
+  h1{
+    letter-spacing: 0.5rem;
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  
+  }
+  .footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: none;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    }
+@media(max-width: 1118px){
+    html{
+       font-size: 60%; 
+    }
+    body{
+        background-size: auto;
+    }
+    .card img{
+        height: 40rem;
+    }
+    
+@media(max-width: 944px){
+    html{
+        font-size: 50%;
+     }
+     body{
+      
+        background-size: auto;
+    }
+    nav ul li a{
+        font-size: 2rem;
+    }
+    .footer {
+        position: relative;
+    }
+
+}
+@media (max-width: 860px){
+    html{
+        font-size: 40%;
+     }
+     body{
+      
+        background-size: auto;
+    }
+    label #btn{
+        display: block;  
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        float: right;
+        background-color:rgb(247, 229, 222); 
+        top: 8rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 9;
+        margin: auto;
+    }
+    nav ul li{
+        display: block;
+        margin: 5rem 0rem;
+        line-height: 3rem;
+    }
+    nav ul i a{
+        font-size: 2rem;
+
+    }
+    #check:checked ~ ul{
+        left:0;
+
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+}
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+    .footer {
+        position: relative;
+    }
+    .column {
+        width: 100%;
+        height: 50%;
+        display: block;
+      }
+    .card img{
+        height: 55rem;
+    }
+    }
+@media(max-width:660px){
+    .card img{
+        height: 47rem;
+    }
+}
+
+@media(max-width:434px){
+    body{
+        background-size: auto;
+    }
+    .containercont{
+        margin:8% 8%;
+    }
+    .footer {
+        position: relative;
+    }
+    .card img{
+        height: 30rem;
+    }
+
+}
+@media(max-width: 390px){
+    html{
+        font-size: 40%; 
+     }
+     body{
+       
+         background-size: auto;
+     }
+    .btn{padding: 2% 1%;
+    }
+    .containercont{
+        margin:5% 5%;
+        width:72%;
+    }
+    .footer {
+        position: relative;
+    }
+    .card img{
+        height: 25rem;
+    }
+}
+
+@media(max-width: 280px){
+    html{
+       font-size: 40%; 
+    }
+    body{
+      
+        background-size: auto;
+    }
+    nav img{
+        width: 75%;
+        height: 6%;  
+    }
+    .footer {
+        position: relative;
+    }
+    .containercont{
+        margin:4% 4%;
+        width:70%;
+    }
+    .card img{
+        height: 25rem;
+    }
+}

@@ -1,0 +1,331 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(214, 68, 15);
+    margin: 0px;
+    padding: 0px;
+    background: url('img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} 
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+nav{
+    height:8.8rem;
+    background-color: rgb(247, 229, 222);
+}
+nav img{
+    width: 35rem;
+    height: 7rem;
+    position: absolute;
+    top: 0.7rem;
+    left:1rem;
+}
+nav ul{
+    float: right;
+    margin-right: 2.5rem;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 8rem;
+    margin: 0rem 1.5rem;
+}
+nav ul li a{
+    position: relative;
+    color: rgb(214, 68, 15);
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: .2rem;
+    width: 100%;
+    background-color: rgb(224, 61, 2);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform.4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,label #cancel{
+    color: rgb(224, 61, 2);
+    font-size: 3rem;
+    line-height: 8rem;
+    float: right;
+    margin-right: 4rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: none;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* mycode */
+.container {
+    border: .2rem solid  rgb(231, 228, 228);
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    padding: 4.3rem;
+    width: 90%;
+    border-radius: 1.3rem;
+    color: black ;
+    text-align: left;
+    background-color: rgb(231, 228, 228);
+    font-size: 2.5rem;
+    line-height: 5rem;
+}
+.btn {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin:auto;
+    background-color: rgb(247, 229, 222);
+    color: rgb(214, 68, 15);
+    padding: 0.4rem 1.4rem;
+    border: 0.2rem solid rgb(214, 68, 15);
+    border-radius: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:hover {
+    background-color: whitesmoke;
+}
+ @media(max-width: 1118px){
+        html{
+           font-size: 60%; 
+        }
+        body{
+          
+            background-size: auto;
+        }
+    
+@media(max-width: 944px){
+        html{
+            font-size: 50%;
+         }
+         body{
+          
+            background-size: auto;
+        }
+        nav ul li a{
+            font-size: 2rem;
+        }
+        .footer {
+            position: fixed;
+        }
+    
+    }
+@media (max-width: 860px){
+        html{
+            font-size: 40%;
+         }
+         body{
+          
+            background-size: auto;
+        }
+        label #btn{
+            display: block;  
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            float: right;
+            background-color:rgb(247, 229, 222); 
+            top: 8rem;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 9;
+            margin: auto;
+    
+        }
+        nav ul li{
+            display: block;
+            margin: 5rem 0rem;
+            line-height: 3rem;
+        }
+        nav ul i a{
+            font-size: 2rem;
+    
+        }
+        #check:checked ~ ul{
+            left:0;
+    
+        }
+        #check:checked ~ label #btn{
+            display: none;
+        }
+    }
+        #check:checked ~ label #cancel{
+            display: block;
+        }
+        .footer {
+            position: fixed;
+        }
+    
+    }
+@media(max-width:530px){
+        body{
+            background-size: auto;
+        }
+        .btn{
+            left:2%;
+        }
+        .container{
+            top: 12%;
+            left:5%
+        }
+        .btn1{
+            left:8%;
+        }
+    }
+    
+@media(max-width:480px){
+        body{
+            background-size: auto;
+        }
+        .container{
+            top: 8%;
+            left:5%;
+            width:90%;
+            padding: 5%;
+        }
+        .btn1{
+            left:6%;
+        }
+    }
+@media(max-width:430px){
+        body{
+            background-size: auto;
+        }
+        .container{
+            top:8%;
+            left:2.5%;
+            width:90%;
+            padding: 3%;
+        }
+        .btn1{
+            left:5%;
+        }
+    }
+    
+@media(max-width: 390px){
+        html{
+            font-size: 35%; 
+         }
+         body{
+           
+             background-size: auto;
+         }
+         .container{
+            top: 9%;
+            left:4%;
+            width:90%;
+            padding: 4%;
+        }
+        .btn1{
+            left:5%;
+        }
+    }
+@media(max-width: 340px){
+        html{
+            font-size: 35%; 
+         }
+         body{
+             background-size: auto;
+         }
+         .container{
+            top: 15%;
+            left:3%;
+            width:95%;
+            padding: 3%;
+        }
+        .btn1{
+            left:1%;
+        }
+        .btn{
+            padding: 1%;
+        }
+    }
+@media(max-width: 330px){
+        html{
+           font-size: 32%; 
+        }
+        body{
+          
+            background-size: auto;
+        }
+        nav img{
+            width: 75%;
+            height: 5%;  
+        }
+        .footer {
+            position: fixed;
+        }
+        .container{
+            top: 11%;
+            left:4%;
+            width:93%;
+            padding: 2%;
+        }
+        .btn{
+            left:-2%;
+        }
+        .btn1{
+            left:2%;
+        }
+    } 
+@media(max-width: 280px){
+        html{
+           font-size: 30%; 
+        }
+        body{
+          
+            background-size: auto;
+        }
+        nav img{
+            width: 75%;
+            height: 5%;  
+        }
+        .footer {
+            position: fixed;
+        }
+        .container{
+            top: 11%;
+            left:2%;
+            width:80%;
+            padding: 2%;
+        }
+        .btn{
+            left:-2%;
+        }
+        .btn1{
+            left:2%;
+        }
+    } 

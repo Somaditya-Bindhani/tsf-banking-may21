@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Bank | Transfer</title>
+    <link rel="shortcut icon" href="img/logo5.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_trans.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+
+        </label>
+        <img src="img/logo6.png" alt="">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="/customers">Customers</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <b>Account Holder :</b> <p><%= senderDetails.name %></p><br>
+        <b>Account No. :</b> <p><%= senderDetails._id %></p><br>
+        <b>Bank Balance :</b> <p><%= senderDetails.balance %></p>
+
+        <form action="/finalTransfer" method="post" >
+            <input class="btn btn1" type="number" name="amount" id="amount" placeholder="Enter the amount"required min="0">
+            <select class="btn btn1" name="reciever" id="receiver" required   >    
+            <option class="btn btn1" value="">---Select Receiver's Account---</option> 
+            <% recieverList.forEach(element => { %>
+                 <option value=<%= element._id %> class="decorated"><%= element.name %></option> 
+                 <% }); %>
+                </select>
+            
+        <button class="btn btn1"type="submit" value=<%= senderDetails._id %> name="senderId">Transfer</button>
+        </form></div>
+        <footer>
+            <div>
+                <p class="footer">Copyright© 2021 . All rights Reserved.</p>
+            </div>
+        </footer>>
+</body>
+</html>
